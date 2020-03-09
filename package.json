@@ -2,6 +2,9 @@
   "name": "pergola",
   "version": "0.0.1",
   "description": "Functional utilities.",
+  "keywords": [
+    "arithmetic"
+  ],
   "license": "MIT",
   "repository": "github:Stassi/pergola",
   "author": "Andreas Stassivik <andreas@stassi.net> (https://github.com/Stassi)",
