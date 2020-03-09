@@ -1,6 +1,6 @@
 {
   "name": "pergola",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Functional utilities.",
   "keywords": [
     "arithmetic",
@@ -42,6 +42,18 @@
     "typedoc-plugin-markdown": "^2.2.17",
     "typescript": "^3.8.3"
   },
+  "engines": {
+    "node": "^8 || ^10 || ^12 || ^13",
+    "npm": "^6"
+  },
+  "os": [
+    "linux",
+    "osx",
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
   "jest": {
     "coverageReporters": [
       "text-lcov"
