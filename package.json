@@ -1,0 +1,55 @@
+{
+  "name": "pergola",
+  "version": "0.1.0",
+  "description": "Functional utilities.",
+  "keywords": [
+    "arithmetic",
+    "comparison"
+  ],
+  "license": "MIT",
+  "repository": "github:Stassi/pergola",
+  "author": "Andreas Stassivik <andreas@stassi.net> (https://github.com/Stassi)",
+  "files": [
+    "docs",
+    "lib"
+  ],
+  "browser": "lib/pergola.iife.js",
+  "main": "lib/pergola.cjs.js",
+  "module": "lib/pergola.esm.js",
+  "types": "lib/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build:all": "npm run build:docs && npm run build:js",
+    "build:docs": "typedoc --hideSources --mode file --readme none",
+    "build:js": "rollup -c",
+    "ci:coverage": "npm run test:unit -- --coverage | coveralls",
+    "prepublishOnly": "npm run build:all",
+    "style:audit": "npm run style:report -- -c",
+    "style:format": "npm run style:report -- --write",
+    "style:report": "prettier **/*.yml package.json rollup.config.js *src/**/* tsconfig.json",
+    "test": "npm run style:audit && npm run test:unit",
+    "test:unit": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "coveralls": "^3.0.9",
+    "jest": "^25.1.0",
+    "prettier": "1.19.1",
+    "rollup": "^2.0.2",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "ts-jest": "^25.2.1",
+    "typedoc": "^0.16.11",
+    "typedoc-plugin-markdown": "^2.2.17",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "coverageReporters": [
+      "text-lcov"
+    ],
+    "preset": "ts-jest"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
