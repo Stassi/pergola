@@ -1,11 +1,10 @@
+jobs:
+  include:
+    - node_js: node
+      script: npm run ci:coverage
+      stage: coverage
 language: node_js
 node_js:
   - 8
   - node
 os: linux
-
-jobs:
-  include:
-    - stage: coverage
-      node_js: node
-      script: npm run ci:coverage
