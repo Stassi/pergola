@@ -20,7 +20,7 @@
   "sideEffects": false,
   "scripts": {
     "build:all": "npm run build:docs && npm run build:js",
-    "build:docs": "typedoc --hideSources --mode file --readme src/docs/header.md",
+    "build:docs": "typedoc --hideSources --mode file --readme none",
     "build:js": "rollup -c",
     "ci:coverage": "npm run test:unit -- --coverage | coveralls",
     "prepublishOnly": "npm run build:all",
