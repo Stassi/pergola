@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 8
+  - node
+
+jobs:
+  include:
+    - stage: coverage
+      node_js: node
+      script: npm run ci:coverage

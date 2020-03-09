@@ -1,2 +1,1 @@
-# pergola
 Functional utilities.
