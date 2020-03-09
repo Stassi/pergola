@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Functional utilities.",
   "keywords": [
-    "arithmetic"
+    "arithmetic",
+    "comparison"
   ],
   "license": "MIT",
   "repository": "github:Stassi/pergola",
