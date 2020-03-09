@@ -1,5 +1,15 @@
+before_deploy: npm run prepublishOnly
 jobs:
   include:
+    - deploy:
+        api_token:
+          secure: lwED9JOYZyJmm8RIIfDmXRrbT86geUtwcCojbPk/nXA2IlHIIdtyn96GRbV+mCy+GGqzKTin+ebc0SIv9mXyKgbLGckzBhqE39j9N79kYcmXfuWQcxrN6kK8KnWeoYl0mEWfqvZK0alOAf6qEktET1qI1ABIKc7TXs9K2+F0yhyHUyUP0wVHjHqLO46b4anJQc8sz34hqDE8kM78GSg9GZVUWs0Gscv+RJ00JUIHpsh95vNXUzNAhXWxvBCGfuD8Qs3gTGCSvE++uxWYi6NZ9xS6bLzGgGmt38PalTTeSk94lZEy4Zsn8v2t+CX+AmlGzN78NHf2eRrhKHO0mYTHJodRBbM7zY2Jf5nGcyGJ2kjq8lrZT2gbDnTGzsjLch3Hn7h6c8RzPKghpUcRUERr2fL4xL7Ksvmry7B5Rf6bUuhPaImU6XpcSglhgmekw4JdF4x3SF/VkSfH2KzVWNbsGPMRTo6coIhCL4H913cNlJVKulGJr50JNXH/+JVkZ2AIACVfstxJcHWEQEKtail5wXG1qEuJ7VrARTjqTDEBXE71bToVLDpX4GLKGxqUXbpuRLOVY7U8z2gSkA4VocOTDIoD8Vsp6bN702x1qtUo4Xzt6DHvEd7gFxVGvzKKPz5AV+aYqHNdRawvrYcUv1edWBb2pW4axvQjysSGFAesrZo=
+        edge: true
+        email: andreas@stassi.net
+        provider: npm
+      if: branch = master
+      node_js: node
+      stage: publish
     - node_js: node
       script: npm run ci:coverage
       stage: coverage
