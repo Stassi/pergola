@@ -20,4 +20,6 @@ node_js:
   - 12
   - 13
   - node
-os: linux
+os:
+  - linux
+  - osx

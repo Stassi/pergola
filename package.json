@@ -47,7 +47,8 @@
     "npm": "^6"
   },
   "os": [
-    "linux"
+    "linux",
+    "osx"
   ],
   "cpu": [
     "x64"
