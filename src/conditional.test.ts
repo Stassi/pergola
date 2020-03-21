@@ -5,7 +5,7 @@ test('return the true value when the predicate is satisfied', () => {
     conditional({
       predicate: () => true,
       ifFalse: () => 'false condition',
-      ifTrue: () => 'true condition'
+      ifTrue: () => 'true condition',
     })
   ).toBe('true condition')
 })
@@ -15,7 +15,7 @@ test('return the false value when the predicate is not satisfied', () => {
     conditional({
       predicate: () => false,
       ifFalse: () => 'false condition',
-      ifTrue: () => 'true condition'
+      ifTrue: () => 'true condition',
     })
   ).toBe('false condition')
 })
