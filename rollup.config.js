@@ -9,16 +9,16 @@ export default {
   output: [
     {
       file: main,
-      format: 'cjs'
+      format: 'cjs',
     },
     {
       file: module,
-      format: 'es'
+      format: 'es',
     },
     {
       name,
       file: browser,
-      format: 'iife'
-    }
-  ]
+      format: 'iife',
+    },
+  ],
 }

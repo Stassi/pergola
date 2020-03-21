@@ -28,7 +28,7 @@ type Predicate = () => boolean
 export default function conditional({
   ifFalse,
   ifTrue,
-  predicate
+  predicate,
 }: {
   ifFalse: IfFalse
   ifTrue: IfTrue
