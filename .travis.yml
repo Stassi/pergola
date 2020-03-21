@@ -1,4 +1,5 @@
 before_deploy: npm run prepublishOnly
+dist: xenial
 jobs:
   include:
     - deploy:
