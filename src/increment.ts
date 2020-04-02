@@ -1,3 +1,5 @@
+import add from './add'
+
 /**
  * @description Increment by 1.
  * @param {number} n Number to be incremented.
@@ -6,5 +8,5 @@
  * @see #sum
  */
 export default function increment(n: number): number {
-  return n + 1
+  return add([n, 1])
 }
