@@ -1,37 +1,47 @@
+/** @typedef {*} ResultIfFalse */
 type ResultIfFalse = any
+
+/** @typedef {*} ResultIfTrue */
 type ResultIfTrue = any
 
 /**
+ * @callback IfFalse
  * @returns {ResultIfFalse}
  */
 type IfFalse = () => ResultIfFalse
 
 /**
+ * @callback IfTrue
  * @returns {ResultIfTrue}
  */
 type IfTrue = () => ResultIfTrue
 
 /**
- * @returns {boolean} Whether the predicate is satisfied.
+ * @callback Predicate
+ * @returns {boolean}
  */
 type Predicate = () => boolean
 
 /**
- * @description Binary decision to call one of two functions.
- * @param {object} params
- * @param {IfFalse} params.ifFalse Called if the predicate is not satisfied.
- * @param {IfTrue} params.ifTrue Called if the predicate is satisfied.
- * @param {Predicate} params.predicate Determines which function is called.
- * @returns {(ResultIfFalse|ResultIfTrue)} Conditional value.
+ * @typedef {object} Input
+ * @property {IfFalse} ifFalse Called if the predicate is not satisfied.
+ * @property {IfTrue} ifTrue Called if the predicate is satisfied.
+ * @property {Predicate} predicate Determines which function is called.
  */
-export default function conditional({
-  ifFalse,
-  ifTrue,
-  predicate,
-}: {
+type Input = {
   ifFalse: IfFalse
   ifTrue: IfTrue
   predicate: Predicate
-}): ResultIfFalse | ResultIfTrue {
+}
+
+/**
+ * @description Binary decision to call one of two functions.
+ * @param {Input} input
+ * @returns {(ResultIfFalse|ResultIfTrue)} Conditional value.
+ */
+export default function conditional(
+  input: Input
+): ResultIfFalse | ResultIfTrue {
+  const { ifFalse, ifTrue, predicate } = input
   return predicate() ? ifTrue() : ifFalse()
 }
