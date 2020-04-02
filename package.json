@@ -4,7 +4,10 @@
   "description": "Functional utilities.",
   "keywords": [
     "arithmetic",
-    "comparison"
+    "comparison",
+    "functional",
+    "immutable",
+    "unary"
   ],
   "license": "MIT",
   "repository": "github:Stassi/pergola",
