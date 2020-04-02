@@ -23,7 +23,6 @@ type Predicate = () => boolean
  * @param {IfTrue} params.ifTrue Called if the predicate is satisfied.
  * @param {Predicate} params.predicate Determines which function is called.
  * @returns {(ResultIfFalse|ResultIfTrue)} Conditional value.
- * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
  */
 export default function conditional({
   ifFalse,
