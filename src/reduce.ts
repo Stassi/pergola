@@ -1,11 +1,11 @@
 /**
  * @callback Reducer
- * @param {any[]} accumulator
+ * @param {any} accumulator
  * @param {any} value
  * @param {number} [index]
  * @returns {*}
  * */
-type Reducer = (accumulator: any[], value: any, index?: number) => any
+type Reducer = (accumulator: any, value: any, index?: number) => any
 
 /**
  * @typedef {object} ReducerInput
