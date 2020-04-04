@@ -1,4 +1,4 @@
-/** @typedef {[number, number]} NumberPair */
+/** @typedef {*[]} NumberPair */
 type NumberPair = [number, number]
 
 /**
