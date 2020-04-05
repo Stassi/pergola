@@ -4,6 +4,6 @@
  * @returns {*[]} Tail elements.
  * @see #head
  */
-export default function tail([, ...elements]: any[]): any {
+export default function tail([, ...elements]: any[]): any[] {
   return elements
 }
