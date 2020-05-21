@@ -1,6 +1,6 @@
-import add from './add'
-import decrement from './decrement'
-import increment from './increment'
+import add from '../../../add'
+import decrement from '../../../decrement'
+import increment from '../../../increment'
 import SinglyLinkedListNode from './SinglyLinkedListNode'
 
 export default class SinglyLinkedList {
