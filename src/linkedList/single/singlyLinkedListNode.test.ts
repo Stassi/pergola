@@ -1,6 +1,6 @@
 import singlyLinkedListNode from './singlyLinkedListNode'
 
-describe('SinglyLinkedListNode', () => {
+describe('singlyLinkedListNode', () => {
   it('should allow nodes to be appended ', () => {
     let nodeA = singlyLinkedListNode({ value: 'a' })
     let nodeB = singlyLinkedListNode({ value: 'b' })
